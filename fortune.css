@@ -1,0 +1,158 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111; /* Тёмный фон */
+    color: #eee; /* Светлый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.05); /* Очень полупрозрачный белый */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Более выраженная тень */
+    padding: 40px;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая белая рамка */
+}
+
+/* Убираем звёзды, т.к. на чёрно-белом фоне они могут выглядеть не очень хорошо */
+body::before,
+body::after {
+    display: none;
+}
+
+/* Шапка (логотип и слоган) */
+.header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 15px;
+    /* Добавляем фильтр для инвертирования цвета, если логотип цветной */
+    filter: grayscale(100%) brightness(150%) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.slogan {
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Более сильная тень */
+}
+
+/* Кнопка "Получить скидку" */
+.button {
+    position: relative;
+    overflow: hidden;
+    background-color: #333; /* Тёмно-серый */
+    border: none;
+    color: #fff;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #555; /* Светлее при наведении */
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    background-color: #777; /* Ещё светлее, когда заблокирована */
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Эффект "shine" */
+.button-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent); /* Менее интенсивный "shine" */
+    transition: left 0.5s ease;
+}
+
+.button:hover .button-shine {
+    left: 100%;
+}
+
+.button-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Сообщения */
+.message {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success {
+    background-color: rgba(50, 50, 50, 0.8); /* Тёмно-серый для успеха */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Очень тонкая белая рамка */
+}
+
+.failure {
+    background-color: rgba(70, 70, 70, 0.8); /* Ещё темнее для неудачи */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.success-title,
+.failure-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.success-code {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Подвал */
+.footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.5); /* Более тусклый текст */
+}

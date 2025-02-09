@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOROZOV SHOP</title>
+    <link rel="stylesheet" href="fortune.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <img src="img/logonew.jpeg" alt="MOROZOV SHOP" class="logo"> <!-- Замените logo.png на свой логотип -->
+            <h1 class="slogan">Ваши лучшие скидки здесь!</h1>
+        </header>
+
+        <button id="getDiscountButton" class="button">
+            <span class="button-text">Получить скидку</span>
+            <div class="button-shine"></div>
+        </button>
+
+        <div id="successMessage" class="message success" style="display: none;">
+            <p class="success-title">🎉 Поздравляем! 🎉</p>
+            <p class="success-code">Ваш промокод: <span id="promoCode"></span></p>
+        </div>
+
+        <div id="failureMessage" class="message failure" style="display: none;">
+            <p class="failure-title">😔 К сожалению, вам не повезло. 😔</p>
+            <p class="failure-text">Попробуйте еще раз через <span id="timer"></span>.</p>
+        </div>
+
+        <footer class="footer">
+            &copy; 2024 MOROZOV SHOP
+        </footer>
+    </div>
+
+    <script src="fortune.js"></script>
+</body>
+</html>

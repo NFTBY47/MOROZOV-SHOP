@@ -1,0 +1,197 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+     background-color: #494343; /* Темно-серый фон */
+    color: #fff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+     scroll-behavior: smooth;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Параллакс */
+.parallax {
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Минимальная высота */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(to bottom, rgba(255,255,255, 0.1), rgba(255,255,255, 0)); /* прозрачный градиент */
+     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+      align-items: center;
+       position: relative;
+    z-index: 1;
+}
+.logo-link {
+  text-decoration: none;
+}
+
+.header-img {
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+.header-img:hover {
+   transform: scale(1.1);
+    filter: grayscale(0%);
+     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+/* Навигация в шапке*/
+.header nav {
+    display: flex;
+     justify-content: center;
+}
+.header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-weight: 600;
+     transition: color 0.3s ease;
+}
+.header nav a:hover {
+    color: #ffffff; /* фиолетовый */
+}
+/* Основной контент */
+.main {
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* выравнивание в начале */
+    align-items: center;
+    position: relative;
+     padding: 100px 0 50px; /* Отступ сверху */
+    z-index: 0;
+    overflow-y: auto;
+}
+
+.info-title {
+     font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    text-align: center;
+     margin-bottom: 30px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* Стили для разделов */
+.info-about,
+.info-benefits,
+.info-client-care {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    text-align: left;
+}
+.info-about p {
+    font-size: 1rem;
+     margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info-benefits h2,
+.info-client-care h2{
+    font-size: 1.8rem;
+     margin-bottom: 15px;
+    text-align: center;
+     font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #eee;
+}
+.info-benefits ul {
+    list-style: none;
+    padding: 0;
+     margin-bottom: 20px;
+}
+.info-benefits ul li {
+     font-size: 1rem;
+     margin-bottom: 10px;
+     line-height: 1.5;
+      display: flex;
+     align-items: center;
+}
+.info-benefits ul li i {
+    margin-right: 8px;
+    color: #777070;
+    font-size: 1.1rem;
+}
+.info-client-care p {
+    font-size: 1rem;
+      margin-bottom: 15px;
+     line-height: 1.6;
+}
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+   .container {
+        padding: 0 10px;
+    }
+   .info-title {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+     .info-about,
+      .info-benefits,
+     .info-client-care {
+       padding: 0 10px;
+        margin-bottom: 25px;
+          max-width: 100%;
+      }
+    .info-about p,
+      .info-benefits ul li,
+     .info-client-care p {
+       font-size: 0.95rem;
+         margin-bottom: 10px;
+    }
+    .info-benefits h2,
+      .info-client-care h2 {
+         font-size: 1.7rem;
+           margin-bottom: 10px;
+       }
+}
+
+@media (max-width: 480px) {
+  .info-title {
+         font-size: 1.8rem;
+       margin-bottom: 20px;
+    }
+    .info-about p,
+      .info-benefits ul li,
+     .info-client-care p {
+         font-size: 0.9rem;
+         margin-bottom: 8px;
+    }
+    .info-benefits h2,
+      .info-client-care h2 {
+          font-size: 1.5rem;
+           margin-bottom: 8px;
+      }
+}

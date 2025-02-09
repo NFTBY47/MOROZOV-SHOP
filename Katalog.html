@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров - MOROZOV SHOP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="katalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <header class="header">
+        <div class="container">
+             <nav class="navigation">
+                <ul class="button-list">
+                   <li><a href="index.html" class="button"><i class="fas fa-home"></i> Главная</a></li>
+                </ul>
+             </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+           <h1 class="catalog-title">Каталог</h1>
+            <div class="category-filter">
+              <button class="filter-button active" data-category="all">Все</button>
+               <button class="filter-button" data-category="kofta">Кофты</button>
+              <button class="filter-button" data-category="polo">Футболки / Топики / Поло</button>
+               <button class="filter-button" data-category="boddy">Боди</button>
+            </div>
+            <div class="product-grid">
+                <div class="product-card" data-category="kofta" data-product-id="1">
+                    <div class="product-image-container">
+                        <img src="img/Kofta-belaya.jpeg" alt="Товар 1" class="product-image">
+                         <div class="overlay-image"></div>
+                    </div>
+
+                    <div class="product-content">
+                         <h3 class="product-name">Весенняя белая кофта</h3>
+                           <p class="product-description">Очаровательная кофта, которая подчркнёт вашу красоту и будет выделять вас на фоне других </p>
+                            <div class="product-details">
+                             <p class="product-price">1500 руб.</p>
+                            <a href="https://www.avito.ru/moskva/odezhda_obuv_aksessuary/vesennyaya_zhenskaya_belaya_kofta_4392153590"<button class="buy-button">Купить</button></a>
+                         </div>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="kofta" data-product-id="2">
+                     <div class="product-image-container">
+                        <img src="img/kofta-chornaya.jpeg" alt="Товар 2" class="product-image">
+                           <div class="overlay-image"></div>
+                     </div>
+                      <div class="product-content">
+                           <h3 class="product-name">Весенняя чёрная кофта</h3>
+                           <p class="product-description">Очаровательная кофта, которая подчркнёт вашу красоту и будет выделять вас на фоне других</p>
+                            <div class="product-details">
+                                 <p class="product-price">1500 руб.</p>
+                              <a href="https://www.avito.ru/moskva/odezhda_obuv_aksessuary/vesennyaya_zhenskaya_chernaya_kofta_4391549335"><button class="buy-button">Купить</button></a>
+                            </div>
+                     </div>
+                 </div>
+                <div class="product-card" data-category="polo" data-product-id="3">
+                  <div class="product-image-container">
+                        <img src="img/beltop.jpeg" alt="Товар 3" class="product-image">
+                          <div class="overlay-image"></div>
+                    </div>
+                     <div class="product-content">
+                        <h3 class="product-name">Белый топик Polo</h3>
+                          <p class="product-description">Белый топик Polo, качественный топ, который должен быть в гардеробе у каждой модницы!</p>
+                            <div class="product-details">
+                                 <p class="product-price">2000 руб.</p>
+                                <button class="buy-button">Купить</button>
+                            </div>
+                     </div>
+                </div>
+               <div class="product-card" data-category="polo" data-product-id="4">
+                 <div class="product-image-container">
+                        <img src="img/svetlloKOR.jpeg" alt="Товар 4" class="product-image">
+                       <div class="overlay-image"></div>
+                   </div>
+                  <div class="product-content">
+                        <h3 class="product-name">Светло-коричневый топик Polo</h3>
+                       <p class="product-description">Светло-Коричневый топик Polo, качественный топ, который должен быть в гардеробе у каждой модницы</p>
+                       <div class="product-details">
+                         <p class="product-price">2000 руб.</p>
+                        <a href=""><button class="buy-button">Купить</button></a>
+                       </div>
+                   </div>
+                </div>
+                 <div class="product-card" data-category="polo" data-product-id="5">
+                     <div class="product-image-container">
+                       <img src="img/Svetlo-Kor.jpg" alt="Товар 5" class="product-image">
+                       <div class="overlay-image"></div>
+                     </div>
+                      <div class="product-content">
+                         <h3 class="product-name">Грязно-серый топик Polo</h3>
+                           <p class="product-description">Грязно-Серый топик Polo, качественный топ, который должен быть в гардеробе у каждой модницы</p>
+                           <div class="product-details">
+                              <p class="product-price">2000 руб.</p>
+                             <button class="buy-button">Купить</button>
+                            </div>
+                      </div>
+                 </div>
+                <div class="product-card" data-category="boddy" data-product-id="6">
+                    <div class="product-image-container">
+                        <img src="img/photo_2025-02-05 19.22.22.jpeg" alt="Товар 6" class="product-image">
+                        <div class="overlay-image"></div>
+                   </div>
+                     <div class="product-content">
+                       <h3 class="product-name">Боди</h3>
+                         <p class="product-description">Стильные очки, которые защитят ваши глаза и подчеркнут ваш вкус. Современный дизайн и высокое качество...</p>
+                        <div class="product-details">
+                            <p class="product-price">1200 руб.</p>
+                           <button class="buy-button">Купить</button>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </main>
+       <footer class="footer">
+         <div class="container">
+              <p>&copy; 2024 MOROZOV SHOP. Все права защищены.</p>
+         </div>
+      </footer>
+   <script src="script.js"></script>
+</body>
+</html>
